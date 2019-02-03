@@ -1,0 +1,11 @@
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\bin\Debug\netcoreapp2.1\HarunBingo.Data.deps.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\bin\Debug\netcoreapp2.1\HarunBingo.Data.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.csprojAssemblyReference.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.AssemblyInfoInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.AssemblyInfo.cs
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\bin\Debug\netcoreapp2.1\HarunBingo.Data.pdb
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\obj\Debug\netcoreapp2.1\HarunBingo.Data.pdb
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\bin\Debug\netcoreapp2.1\HarunBingo.Data.runtimeconfig.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo.Data\bin\Debug\netcoreapp2.1\HarunBingo.Data.runtimeconfig.dev.json

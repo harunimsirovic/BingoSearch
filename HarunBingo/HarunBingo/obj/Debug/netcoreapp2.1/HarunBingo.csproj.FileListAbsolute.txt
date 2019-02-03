@@ -1,0 +1,14 @@
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.deps.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.runtimeconfig.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.runtimeconfig.dev.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.csprojAssemblyReference.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.RazorAssemblyInfo.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.RazorAssemblyInfo.cs
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.AssemblyInfoInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.AssemblyInfo.cs
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.RazorTargetAssemblyInfo.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.pdb
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.pdb

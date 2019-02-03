@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bingo Search</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+         html, body {
+             height: 100%;
+             width: 100%;
+             margin: 0;
+             padding: 0;
+             font-family: 'Trebuchet MS', serif;
+             line-height: 1.6;
+         }
+
+         .container {
+             width: 70%;
+             height: 95%;
+             margin: 0 auto;
+             padding-bottom: 5%;
+         }
+
+
+
+         ul.tabs {
+             margin: 0px;
+             padding: 0px;
+             list-style: none;
+         }
+
+             ul.tabs li {
+                 background: none;
+                 color: #222;
+                 display: inline-block;
+                 padding: 10px 15px;
+                 cursor: pointer;
+             }
+
+                 ul.tabs li.current {
+                     background: #ededed;
+                     color: #222;
+                 }
+
+         .tab-content {
+             display: none;
+             width: 100%;
+             height: 100%;
+             padding: 15px;
+             background: #ededed;
+         }
+
+
+             .tab-content.current {
+                 display: inherit;
+             }
+
+         .map {
+             height: 100%;
+         }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script>
+
+        var map;
+        var service;
+        var infowindow;
+        var harunHouse = { lat: 44.524955, lng: 18.645675 };
+        var rqData = {
+            "coordinates": harunHouse.lat + "," + harunHouse.lng,
+            "distance": "5000",
+            "lat": harunHouse.lat,
+            "lng": harunHouse.lng
+        };
+
+        function initMap() {
+            var tuzla = new google.maps.LatLng(rqData.lat, rqData.lng);
+
+            infowindow = new google.maps.InfoWindow();
+
+            map = new google.maps.Map(
+                document.getElementById('map'), { center: tuzla, zoom: 15 });
+
+            var request = {
+                location: tuzla,
+                radius: rqData.distance,
+                query: 'bingo supermarket',
+            };
+
+            service = new google.maps.places.PlacesService(map);
+            service.textSearch(request, callback);
+
+        }
+
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    var place = results[i];
+                    createMarker(results[i]);
+                }
+                var marker = new google.maps.Marker({
+                    position: harunHouse,
+                    formatted_address: "Pavla Goranina 61",
+                    map: map,
+                    name: 'Harun Imsirovic\'s House',
+                    geometry: {
+                        location: {
+                            lat: harunHouse.lat,
+                            lng: harunHouse.lng
+                        }
+                    }
+                });
+                createMarker(marker);
+            }
+        }
+
+
+        function createMarker(place) {
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent(place.name + ', ' + place.formatted_address) + ', (' + place.geometry.location.lat + ', ' + place.geometry.location.lng + ')';
+                infowindow.open(map, this);
+            });
+        }
+        $(document).ready(function () {
+            $("#dist").html("Distance set: " + rqData.distance + "m");
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+
+                if (tab_id == "tab-2") {
+                    $("#cont").css("height", "auto");
+                    $("#inpLat").val(harunHouse.lat);
+                    $("#inpLng").val(harunHouse.lng);
+                    $("#inpDst").val(rqData.distance);
+
+                }
+                else {
+                    $("#cont").css("height", "95%");
+                    $("#dist").html("Distance set: " + rqData.distance + "m");
+                }
+
+            }
+
+            );
+            $("#apiCall").click(function () {
+                reciveData();
+            });
+            $("#saveBingo").click(function () {
+                sendData();
+            });
+            $("#btnNew").on("click", function () {
+                harunHouse.lat = $("#inpLat").val();
+                harunHouse.lng = $("#inpLng").val();
+                rqData.distance = $("#inpDst").val();
+                rqData.coordinates = harunHouse.lat + "," + harunHouse.lng;
+                rqData.lat = harunHouse.lat;
+                rqData.lng = harunHouse.lng;
+                sendData();
+            });
+
+
+
+        })
+
+        function sendData() {
+            var url = "http://localhost:60761/api/bingo?coordinates=" + rqData.coordinates + "&distance=" + rqData.distance;
+
+            $.ajax({
+                method: "POST",
+                url: url,
+                dataType: "json",
+                success: function () {
+                    reciveData();
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+        function reciveData() {
+            var url = "http://localhost:60761/api/bingo";
+
+            $.ajax({
+                method: "GET",
+                url: url,
+                dataType: "json",
+                success: function (response) {
+                    $("#tableBody").empty();
+                    var i = 1;
+                    response.value.forEach(function (el) {
+                        var row = '<tr>' +
+                            '      <th scope="row">' + (i++) + '</th>' +
+                            '      <td>' + el.name + '</td>' +
+                            '      <td>' + el.address + '</td>' +
+                            '      <td>' + el.distanceInKm + '</td>' +
+                            '	  <td>' + el.geoCoordinates + '</td>' +
+                            '    </tr>';
+                        $("#tableBody").append(row);
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="cont">
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">Map</li>
+            <li id="apiCall" class="tab-link" data-tab="tab-2">API Call</li>
+        </ul>
+
+        <div id="tab-1" class="tab-content current">
+            <div id="map" class="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8XaJKZmqULy2iDsg0OTJ9JHlBt0Gmglo&libraries=places&callback=initMap" async defer></script>
+            <button id="saveBingo" class="btn btn-success" style="margin-top:3%">Save Bingo's</button>
+            <p id="dist"></p>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <label>Latitude</label><input type="number" id="inpLat" step="any">
+            <label>Longitude</label><input type="number" id="inpLng" step="any">
+            <label>Distance</label><input type="number" id="inpDst" step="1">
+            <button id="btnNew" class="btn btn-success btn-xs">Get New Data</button> <br />
+            <p>You can input new Lat/Lng/Distance values and get new Bingo Locations. *NOTE* Since this API key hasn't got enabled Google Distance Matrix API Project, I've calculated the distance using the math function that I found online so the calculated distance isn't matching the Google one. </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Distance(km)</th>
+                        <th scope="col">Coordinates</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+    </div><!-- container -->
+
+</body>
+</html>
+<!-- Harun Imsirovic -->
