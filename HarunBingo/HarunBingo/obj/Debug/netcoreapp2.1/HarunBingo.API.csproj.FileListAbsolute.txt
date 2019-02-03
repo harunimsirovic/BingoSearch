@@ -1,0 +1,17 @@
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.API.deps.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.API.runtimeconfig.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.API.runtimeconfig.dev.json
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.API.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.API.pdb
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.Data.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\bin\Debug\netcoreapp2.1\HarunBingo.Data.pdb
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.csprojAssemblyReference.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.RazorAssemblyInfo.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.RazorAssemblyInfo.cs
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.AssemblyInfoInputs.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.AssemblyInfo.cs
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.RazorTargetAssemblyInfo.cache
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.csproj.CopyComplete
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.dll
+C:\Users\Jesus\Documents\Visual Studio 2017\Projects\HarunBingo\HarunBingo\obj\Debug\netcoreapp2.1\HarunBingo.API.pdb
